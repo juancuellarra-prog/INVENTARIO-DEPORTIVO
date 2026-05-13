@@ -1,58 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Dashboard</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="shortcut icon" href="img/logo.png" type="img/png">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<div class="sidebar">
+    <!-- HEADER -->
+    <header class="header">
 
-<img class="login-logo" src="img/logo.png" alt="Inicio">
-<h2>Cuellar Sport</h2>
+        <!-- SEARCH -->
+        <form class="search">
 
-<a href="dashboard.html" class="active">Inicio</a>
-<a href="productos.html">Productos</a>
+            <i class="lupa fa-solid fa-magnifying-glass"></i>
 
-<a href="usuarios.html">Usuarios</a>
+            <input
+            type="text"
+            placeholder="Buscar"
+            class="buscar">
+
+        </form>
+
+        <!-- TITULO -->
+        <h1>Cuellar Sport</h1>
+
+        <!-- MENU -->
+        <i class="menu fa-solid fa-bars"></i>
+
+    </header>
+
+    <!-- CONTENEDOR GENERAL -->
+    <div class="contenedor">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <img class="login-logo"
+            src="img/logo.png"
+            alt="Inicio">
+
+            <h2>Cuellar Sport</h2>
+
+            <a href="dashboard.html" class="active">
+                Inicio
+            </a>
+
+            <a href="productos.html">
+                Productos
+            </a>
+
+            <a href="usuarios.html">
+                Usuarios
+            </a>
+
+            <form action="index.html">
+
+                <button
+                type="submit"
+                class="logout">
+
+                    Cerrar sesión
+
+                </button>
+
+            </form>
+
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <h1 class="h">
+                Dashboard
+            </h1>
+
+            <p class="p">
+                Resumen general del inventario
+            </p>
+
+            <!-- CARDS -->
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Total Productos</h3>
+
+                    <p id="total-productos">Cargando...</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Total Usuarios</h3>
+
+                    <p id="total-usuarios">Cargando...</p>
+
+                </div>
 
 
 
-</div>
+            </div>
 
-<div class="main">
+        </main>
 
-<h1>Dashboard</h1>
-<p>Resumen general del inventario</p>
-
-<div class="cards">
-
-<div class="card">
-<h3>Total productos</h3>
-<p>248</p>
-</div>
-
-<div class="card">
-<h3>Stock bajo</h3>
-<p>12</p>
-</div>
-
-<div class="card">
-<h3>Entradas</h3>
-<p>34</p>
-</div>
-
-<div class="card">
-<h3>Salidas</h3>
-<p>28</p>
-</div>
-
-</div>
-
-</div>
-
+    </div>
+    <script src="api.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>

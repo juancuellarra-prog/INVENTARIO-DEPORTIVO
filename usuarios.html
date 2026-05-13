@@ -1,83 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Perfil</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script src="api.js"></script>
+<script src="usuarios.js"></script>
+
 </head>
 
 <body>
 
-<div class="sidebar">
+<!-- HEADER -->
+<header class="header">
 
-    <img class="login-logo" src="img/logo.png" alt="Inicio">
+    <!-- BUSCADOR -->
+    <form class="search">
+
+        <i class="lupa fa-solid fa-magnifying-glass"></i>
+
+        <input
+        type="text"
+        placeholder="Buscar"
+        class="buscar">
+
+    </form>
+
+    <!-- TITULO -->
+    <h1>Cuellar Sport</h1>
+
+    <!-- MENU -->
+    <i class="menu fa-solid fa-bars"></i>
+
+</header>
+
+<!-- CONTENEDOR -->
+<div class="contenedor">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <img class="login-logo"
+    src="img/logo.png"
+    alt="Inicio">
+
     <h2>Cuellar Sport</h2>
 
-    <a href="dashboard.html">Inicio</a>
-    <a href="productos.html">Productos</a>
-   
-    <a href="usuarios.html">Usuarios</a>
+    <a href="dashboard.html">
+        Inicio
+    </a>
 
-</div>
+    <a href="productos.html">
+        Productos
+    </a>
 
-<div class="main">
+    <a href="usuarios.html" class="active">
+        Usuarios
+    </a>
+
+    <form action="index.html">
+
+        <button
+        type="submit"
+        class="logout">
+
+            Cerrar sesión
+
+        </button>
+
+    </form>
+
+</aside>
+
+<!-- MAIN -->
+<main class="main">
 
     <h1>Perfil</h1>
-    <a href="agregar-usuario.html" class="btn">Agregar usuario</a>
+
+    <a href="agregar-usuario.html"
+    class="btn">
+
+        Agregar usuario
+
+    </a>
 
     <table>
+
         <thead>
+
             <tr>
+
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Rol</th>
                 <th>Estado</th>
                 <th>Acciones</th>
+
             </tr>
+
         </thead>
 
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Juan Cuellar</td>
-                <td>juan@email.com</td>
-                <td>Administrador</td>
-                <td>Activo</td>
-                <td>
-                    <a class="btn-edit">Editar</a>
-                    <a class="btn-delete">Eliminar</a>
-                </td>
-            </tr>
+        <tbody id="usuarios-tbody">
 
-            <tr>
-                <td>2</td>
-                <td>Maria Lopez</td>
-                <td>maria@email.com</td>
-                <td>Vendedor</td>
-                <td>Activo</td>
-                <td>
-                    <a class="btn-edit">Editar</a>
-                    <a class="btn-delete">Eliminar</a>
-                </td>
-            </tr>
-
-            <tr>
-                <td>3</td>
-                <td>Carlos Ruiz</td>
-                <td>carlos@email.com</td>
-                <td>Almacén</td>
-                <td>Inactivo</td>
-                <td>
-                    <a class="btn-edit">Editar</a>
-                    <a class="btn-delete">Eliminar</a>
-                </td>
-            </tr>
         </tbody>
+
     </table>
 
-</div>
+</main>
 
-</body>
-</html>
+</div>
